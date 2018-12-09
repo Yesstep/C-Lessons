@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -24,13 +24,7 @@ namespace TicTakToe_backup
             {
                 PrintField();
 
-                if(WinCheck())
-                {
-                    Console.WriteLine("Player {0} Wins!!!", player);
-                    Console.WriteLine("Press any key to replay.");
-                    Console.ReadLine();
-                    ResetGame();
-                }
+                WinCheck();
 
                 if (playerInput == 9)
                 {
@@ -127,6 +121,10 @@ namespace TicTakToe_backup
                 || (board[2] == token && board[4] == token && board[6] == token))
             {
                 hasWon = true;
+                Console.WriteLine("Player {0} Wins!!!", player);
+                Console.WriteLine("Press any key to replay.");
+                Console.ReadLine();
+                ResetGame();
             }
             return hasWon;
         }
