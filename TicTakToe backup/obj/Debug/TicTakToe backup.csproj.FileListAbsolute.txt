@@ -1,0 +1,14 @@
+C:\Users\Smeeo\source\repos\TicTakToe backup\TicTakToe backup\bin\Debug\TicTakToe backup.exe.config
+C:\Users\Smeeo\source\repos\TicTakToe backup\TicTakToe backup\bin\Debug\TicTakToe backup.exe
+C:\Users\Smeeo\source\repos\TicTakToe backup\TicTakToe backup\bin\Debug\TicTakToe backup.pdb
+C:\Users\Smeeo\source\repos\TicTakToe backup\TicTakToe backup\obj\Debug\TicTakToe backup.csprojAssemblyReference.cache
+C:\Users\Smeeo\source\repos\TicTakToe backup\TicTakToe backup\obj\Debug\TicTakToe backup.csproj.CoreCompileInputs.cache
+C:\Users\Smeeo\source\repos\TicTakToe backup\TicTakToe backup\obj\Debug\TicTakToe backup.exe
+C:\Users\Smeeo\source\repos\TicTakToe backup\TicTakToe backup\obj\Debug\TicTakToe backup.pdb
+C:\Users\Smeeo\OneDrive\Desktop\C# projects\TicTakToe backup\TicTakToe backup\bin\Debug\TicTakToe backup.exe.config
+C:\Users\Smeeo\OneDrive\Desktop\C# projects\TicTakToe backup\TicTakToe backup\bin\Debug\TicTakToe backup.exe
+C:\Users\Smeeo\OneDrive\Desktop\C# projects\TicTakToe backup\TicTakToe backup\bin\Debug\TicTakToe backup.pdb
+C:\Users\Smeeo\OneDrive\Desktop\C# projects\TicTakToe backup\TicTakToe backup\obj\Debug\TicTakToe backup.csprojAssemblyReference.cache
+C:\Users\Smeeo\OneDrive\Desktop\C# projects\TicTakToe backup\TicTakToe backup\obj\Debug\TicTakToe backup.csproj.CoreCompileInputs.cache
+C:\Users\Smeeo\OneDrive\Desktop\C# projects\TicTakToe backup\TicTakToe backup\obj\Debug\TicTakToe backup.exe
+C:\Users\Smeeo\OneDrive\Desktop\C# projects\TicTakToe backup\TicTakToe backup\obj\Debug\TicTakToe backup.pdb
