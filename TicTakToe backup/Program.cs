@@ -52,7 +52,7 @@ namespace TicTakToe_backup
                 do
                 {
 
-                    Console.WriteLine("\nPlayer {0}: chosse a field.", player);
+                    Console.WriteLine("\nPlayer {0}: choose a field.", player);
 
                     string input = Console.ReadLine();
 
