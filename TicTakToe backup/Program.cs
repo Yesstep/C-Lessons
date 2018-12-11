@@ -13,9 +13,11 @@ namespace TicTakToe_backup
         static bool isNum = true;
         static string token = "X";
 
-        static string[] board = 
+        static string[,] board =
                 {
-                    "1", "2", "3", "4", "5", "6", "7", "8", "9"
+                    { "1", "2", "3" },
+                    { "4", "5", "6" },
+                    { "7", "8", "9" }
                 };
 
         public static void Main(string[] args)
@@ -23,8 +25,6 @@ namespace TicTakToe_backup
             do
             {
                 PrintField();
-
-                WinCheck();
 
                 if (playerInput == 9)
                 {
@@ -51,7 +51,6 @@ namespace TicTakToe_backup
 
                 do
                 {
-
                     Console.WriteLine("\nPlayer {0}: chosse a field.", player);
 
                     string input = Console.ReadLine();
@@ -60,9 +59,9 @@ namespace TicTakToe_backup
 
                     if (isNum && position < 10 && position > 0)
                     {
-                        if (board[position - 1] != "X" && board[position - 1] != "O")
+                        if (FieldCahange(input))
                         {
-                            board[position - 1] = token;
+                            WinCheck();
                             playerInput++;
                             break;
                         }
@@ -70,6 +69,7 @@ namespace TicTakToe_backup
                         {
                             Console.WriteLine("\nPlease choose another field!");
                         }
+                        
                     }
                     else if (!isNum)
                     {
@@ -89,26 +89,26 @@ namespace TicTakToe_backup
         {
             Console.Clear();
             Console.WriteLine("     |     |    ");
-            Console.WriteLine("  {0}  |  {1}  |  {2}  ", board[0], board[1], board[2]);
+            Console.WriteLine("  {0}  |  {1}  |  {2}  ", board[0,0], board[0,1], board[0,2]);
             Console.WriteLine("_____|_____|_____");
             Console.WriteLine("     |     |    ");
-            Console.WriteLine("  {0}  |  {1}  |  {2}  ", board[3], board[4], board[5]);
+            Console.WriteLine("  {0}  |  {1}  |  {2}  ", board[1,0], board[1,1], board[1,2]);
             Console.WriteLine("_____|_____|_____");
             Console.WriteLine("     |     |    ");
-            Console.WriteLine("  {0}  |  {1}  |  {2}  ", board[6], board[7], board[8]);
+            Console.WriteLine("  {0}  |  {1}  |  {2}  ", board[2,0], board[2,1], board[2,2]);
             Console.WriteLine("     |     |    ");
         }
 
         public static void WinCheck()
         {
-            if((board[0] == token && board[1] == token && board[2] == token) 
-                || (board[3] == token && board[4] == token && board[5] == token) 
-                || (board[6] == token && board[7] == token && board[8] == token) 
-                || (board[0] == token && board[3] == token && board[6] == token) 
-                || (board[1] == token && board[4] == token && board[7] == token) 
-                || (board[2] == token && board[5] == token && board[8] == token) 
-                || (board[0] == token && board[4] == token && board[8] == token) 
-                || (board[2] == token && board[4] == token && board[6] == token))
+            if((board[0,0] == token && board[0,1] == token && board[0,2] == token) 
+                || (board[1,0] == token && board[1,1] == token && board[1,2] == token) 
+                || (board[2,0] == token && board[2,1] == token && board[2,2] == token) 
+                || (board[0,0] == token && board[1,0] == token && board[2,0] == token) 
+                || (board[0,1] == token && board[1,1] == token && board[2,1] == token) 
+                || (board[0,2] == token && board[1,2] == token && board[2,2] == token) 
+                || (board[0,0] == token && board[1,1] == token && board[2,2] == token) 
+                || (board[0,2] == token && board[1,1] == token && board[2,0] == token))
             {
                 Console.WriteLine("Player {0} Wins!!!", player);
                 Console.WriteLine("Press any key to replay.");
@@ -119,14 +119,33 @@ namespace TicTakToe_backup
 
         public static void ResetGame()
         {
-            string[] boardInitial =
+            string[,] boardInitial =
                 {
-                    "1", "2", "3", "4", "5", "6", "7", "8", "9"
+                    { "1", "2", "3" },
+                    { "4", "5", "6" },
+                    { "7", "8", "9" }
                 };
 
             board = boardInitial;
             playerInput = 0;
             PrintField();
+        }
+
+        public static bool FieldCahange(string input)
+        { 
+            bool hasChanged = false;
+            for(int i = 0; i <= 2; i++)
+            {
+                for(int j = 0; j <= 2; j++)
+                {
+                    if (board[i, j] == input && board[i, j] != "X" && board[i, j] != "O")
+                    {
+                        board[i, j] = token;
+                        hasChanged = true;
+                    }
+                }
+            }
+            return hasChanged;
         }
     }
 }
